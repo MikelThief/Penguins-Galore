@@ -12,12 +12,6 @@
 
 #define MAX_LEN 128 // for ascii printing
 
-#define TURNBYTURN_MODE
-//#define DEBUG_MODE
-
-/*TURNBYTURN_MODE, Wait the player to press anything every DrawScreen() and clear the screen,
-easier to follow longer games, but still gives us the opportunity to see full output, windows only*/
-
 //Preaparation for pointers to functions
 typedef int (*Pointer)(int s, int PID, int a, int NumOfRows, int NumOfCols, int FishArray[NumOfRows][NumOfCols], int AllPengs, int PengArray[AllPengs][3]);
 
@@ -43,6 +37,31 @@ int CenterCrdY(int s, int PID, int a, int NumOfRows, int NumOfCols, int FishArra
 int CenterSpaces(int s, int PID, int a, int NumOfRows, int NumOfCols, int FishArray[NumOfRows][NumOfCols], int AllPengs, int PengArray[AllPengs][3]);
 int CenterPengID(int s, int PID, int a, int NumOfRows, int NumOfCols, int FishArray[NumOfRows][NumOfCols], int AllPengs, int PengArray[AllPengs][3]);
 
+//Functions from Julian Tian's algorithm
+int JulianDir(int s, int PID, int a, int NumOfRows, int NumOfCols, int FishArray[NumOfRows][NumOfCols], int AllPengs, int PengArray[AllPengs][3]);
+int JulianCrdX(int s, int PID, int a, int NumOfRows, int NumOfCols, int FishArray[NumOfRows][NumOfCols], int AllPengs, int PengArray[AllPengs][3]);
+int JulianCrdY(int s, int PID, int a, int NumOfRows, int NumOfCols, int FishArray[NumOfRows][NumOfCols], int AllPengs, int PengArray[AllPengs][3]);
+int JulianSpaces(int s, int PID, int a, int NumOfRows, int NumOfCols, int FishArray[NumOfRows][NumOfCols], int AllPengs, int PengArray[AllPengs][3]);
+int JulianPengID(int s, int PID, int a, int NumOfRows, int NumOfCols, int FishArray[NumOfRows][NumOfCols], int AllPengs, int PengArray[AllPengs][3]);
+
+//Photon - Michal Bator
+int PhotonCrdX(int Spaces, int PengID, int Turn, int NumberOfRows, int NumberOfColumns, int FishArray[NumberOfRows][NumberOfColumns], int AllPengs, int PengArray[AllPengs][3]);
+int PhotonCrdY(int Spaces, int PengID, int Turn, int NumberOfRows, int NumberOfColumns, int FishArray[NumberOfRows][NumberOfColumns], int AllPengs, int PengArray[AllPengs][3]);
+int PhotonSpaces(int Spaces, int PengID, const int Turn, const int NumberOfRows, const int NumberOfColumns, const int FishArray[NumberOfRows][NumberOfColumns], const int AllPengs, int PengArray[AllPengs][3]);
+int PhotonDir(int Spaces, int PengID, const int Turn, const int NumberOfRows, const int NumberOfColumns, const int FishArray[NumberOfRows][NumberOfColumns], const int AllPengs, int PengArray[AllPengs][3]);
+int PhotonPengID(int Spaces, int PengID, const int Turn, const int NumberOfRows, const int NumberOfColumns, const int FishArray[NumberOfRows][NumberOfColumns], const int AllPengs, int PengArray[AllPengs][3]);
+
+
+
+
+
+//Functions from Teemu Virkkala's algorithm
+int TeemuDir(int s, int PID, int a, int NumOfRows, int NumOfCols, int FishArray[NumOfRows][NumOfCols], int AllPengs, int PengArray[AllPengs][3]);
+int TeemuCrdX(int s, int PID, int a, int NumOfRows, int NumOfCols, int FishArray[NumOfRows][NumOfCols], int AllPengs, int PengArray[AllPengs][3]);
+int TeemuCrdY(int s, int PID, int a, int NumOfRows, int NumOfCols, int FishArray[NumOfRows][NumOfCols], int AllPengs, int PengArray[AllPengs][3]);
+int TeemuSpaces(int s, int PID, int a, int NumOfRows, int NumOfCols, int FishArray[NumOfRows][NumOfCols], int AllPengs, int PengArray[AllPengs][3]);
+int TeemuPengID(int s, int PID, int a, int NumOfRows, int NumOfCols, int FishArray[NumOfRows][NumOfCols], int AllPengs, int PengArray[AllPengs][3]);
+
 //BasicFunctions
 void MapGenerator(int NumOfRows, int NumOfCols, int FishArray[NumOfRows][NumOfCols]);
 void Cleaner(int iLimit, int jLimit, int Array[iLimit][jLimit]);
@@ -51,7 +70,7 @@ void DrawBoard(int NumOfRows, int NumOfCols, int FishArray[NumOfRows][NumOfCols]
 int PosPeng(int, int, int NumOfRows, int NumOfCols, int FishArray[NumOfRows][NumOfCols], int AllPengs, int PengArray[AllPengs][3]);
 void Intro();
 void AsciiArtPrinter(FILE *fptr);
-int PlayGame(Pointer PointerX1, Pointer PointerY1, Pointer PointerDir1, Pointer PointerSpaces1, Pointer PointerPengID1, Pointer PointerX2, Pointer PointerY2, Pointer PointerDir2, Pointer PointerSpaces2, Pointer PointerPengID2);
+void PlayGame(Pointer PointerX1, Pointer PointerY1, Pointer PointerDir1, Pointer PointerSpaces1, Pointer PointerPengID1, Pointer PointerX2, Pointer PointerY2, Pointer PointerDir2, Pointer PointerSpaces2, Pointer PointerPengID2);
 int Score (int, int, int, int NumOfCols, int FishArray[][NumOfCols]);
 
 //Saving and Loading

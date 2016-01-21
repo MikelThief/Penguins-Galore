@@ -7,10 +7,7 @@ void DrawBoard(int NumOfRows, int NumOfCols, int FishArray[NumOfRows][NumOfCols]
     int i,j;
     HANDLE  hConsole;
     hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
-
-    #ifdef TURNBYTURN_MODE
     system ( "cls" );
-    #endif
 
     //printf columns numbers
     printf("    ");                              //printf columns numbers
@@ -22,24 +19,12 @@ void DrawBoard(int NumOfRows, int NumOfCols, int FishArray[NumOfRows][NumOfCols]
     }                                           //
     printf("\n");                               //
 
-    #ifdef DEBUG_MODE
-    for (i = 0; i < NumOfRows; i++) {
-    #else
     for (i = 1; i < NumOfRows - 1; i++) {
-    #endif // DEBUG_MODE
-    SetConsoleTextAttribute(hConsole, 121);
-
-            printf("%3i", i);
-            SetConsoleTextAttribute(hConsole, 7);
-            if(i%2==1) printf(" ");
-
-                  //-||-
+        SetConsoleTextAttribute(hConsole, 121);
+        printf("%3i", i);
         SetConsoleTextAttribute(hConsole, 7);
-        #ifdef DEBUG_MODE
-        for(j = 0; j < NumOfCols; j++) {
-        #else
+        if(i%2==1) printf(" ");
         for(j = 1; j < NumOfCols - 1; j++) {
-        #endif // DEBUG_MODE
             if(CheckPeng(i, j, AllPengs, PengArray)) { //Check if there's a penguin in given coordinates
                 if(CheckPeng(i, j, AllPengs, PengArray) % 2) {
                     SetConsoleTextAttribute(hConsole, 14);  //yellow
@@ -50,11 +35,7 @@ void DrawBoard(int NumOfRows, int NumOfCols, int FishArray[NumOfRows][NumOfCols]
                 }
                 SetConsoleTextAttribute(hConsole, 7);       //normal
             } else if(FishArray[i][j] == 0) {
-                #ifdef DEBUG_MODE
-                printf("0  ");
-                #else
                 printf("   ");
-                #endif // DEBUG_MODE
             } else {
                 printf(" %i ", FishArray[i][j]); //If not just print the amount of fishes
             }

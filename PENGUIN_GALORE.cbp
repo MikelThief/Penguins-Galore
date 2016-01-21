@@ -37,7 +37,19 @@
 		<Unit filename="Algorithms/Dummy.c">
 			<Option compilerVar="CC" />
 		</Unit>
+		<Unit filename="Algorithms/JulianTian.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Algorithms/Katja&apos;sRandom.c">
+			<Option compilerVar="CC" />
+		</Unit>
 		<Unit filename="Algorithms/ManualOverride.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Algorithms/Photon.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Algorithms/TeemuVirkkala.c">
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="Algorithms/user.h" />

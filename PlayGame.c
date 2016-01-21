@@ -1,14 +1,15 @@
 #include "main.h"
 
-int PlayGame(Pointer PointerX1, Pointer PointerY1, Pointer PointerDir1, Pointer PointerSpaces1, Pointer PointerPengID1, Pointer PointerX2, Pointer PointerY2, Pointer PointerDir2, Pointer PointerSpaces2, Pointer PointerPengID2) {
+void PlayGame(Pointer PointerX1, Pointer PointerY1, Pointer PointerDir1, Pointer PointerSpaces1, Pointer PointerPengID1, Pointer PointerX2, Pointer PointerY2, Pointer PointerDir2, Pointer PointerSpaces2, Pointer PointerPengID2) {
 
     // initializations//
     HANDLE  hConsole;
     hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
     int NumberOfRows, NumberOfColumns, AllPengs = 0, i, j, PengID = 0, Spaces = 0, Dir, X, Y, moved, idRow, score1 = 0, score2 = 0; //AllPengs should be the full amount of penguins in the future
+    int failsafe = 0, endsafe = 0;
     char filename[128], name[128];
     const char* ext = ".map";
-
+    Again:
     //Taking data from user//
     printf("Set board:");
     printf("\n1. Generate your own board");
@@ -17,28 +18,13 @@ int PlayGame(Pointer PointerX1, Pointer PointerY1, Pointer PointerDir1, Pointer 
 
     switch(j) {
         case 1: {
-            printf("\nEnter NumberOfRows: \n");
+            printf("\nEnter number of rows: \n");
             scanf("%i", &NumberOfRows);
             NumberOfRows += 2;
 
-            printf("Enter NumberOfColumns: \n");
+            printf("Enter number of columns: \n");
             scanf("%i", &NumberOfColumns);
             NumberOfColumns += 2;
-
-            while(1) {
-                printf("Enter a filename for saving: \n");
-                scanf(" %s", name);
-                if(sizeof(filename) > strlen(name) + 1) {
-                    strncpy(filename, name, sizeof(filename));
-                    if(sizeof(filename) > (strlen(filename) + strlen(ext) + 1) ) {
-                        strncat(filename, ext, (sizeof(filename) - strlen(filename)));
-                        break;
-                    } else
-                        printf("Filename is too long!\n");
-                } else
-                    printf("Filename is too long!\n");
-            }
-
             break;
         }
         case 2: {
@@ -67,10 +53,15 @@ int PlayGame(Pointer PointerX1, Pointer PointerY1, Pointer PointerDir1, Pointer 
             score2 = LoadRoC(filename, 6);
             break;
         }
+        default: {
+                printf("Give a proper choice!\n");
+                goto Again;
+                break;
+            }
     }
 
     if(AllPengs == 0) {
-        printf("Enter of penguins for each player: \n");
+        printf("Enter number of penguins for each player: \n");
         scanf("%i", &AllPengs);
         AllPengs = AllPengs * 2;
     }
@@ -78,7 +69,6 @@ int PlayGame(Pointer PointerX1, Pointer PointerY1, Pointer PointerDir1, Pointer 
     int FishArray[NumberOfRows][NumberOfColumns]; //surrounded my 0 fishes floes
     int PengArray[AllPengs][3]; /* Columns: AllPengs, x coord, y coord of penguin? So one row per penguin.
                                 AllPengs to check if the player is allowed to move the penguin */
-
     switch(j) {
         case 1: {
             Cleaner(NumberOfRows, NumberOfColumns, FishArray);
@@ -117,7 +107,7 @@ int PlayGame(Pointer PointerX1, Pointer PointerY1, Pointer PointerDir1, Pointer 
             } else {
                 SetConsoleTextAttribute(hConsole, 7);
                 printf("You violated the rules! Try to place penguin again!\n");
-                Sleep(1000);
+                Sleep(700);
                 DrawBoard(NumberOfRows, NumberOfColumns, FishArray, AllPengs, PengArray);
             }
         }
@@ -126,10 +116,7 @@ int PlayGame(Pointer PointerX1, Pointer PointerY1, Pointer PointerDir1, Pointer 
 
     DrawBoard(NumberOfRows, NumberOfColumns, FishArray, AllPengs, PengArray);
     PrintCoords(score1, score2, AllPengs, PengArray);
-    #ifdef TURNBYTURN_MODE
     printf("Turn %d\n", i);
-    #endif
-    //Moving
     while(CheckEnd(0, NumberOfColumns, FishArray, AllPengs, PengArray) == 0) {
         moved = 0;
         if(i % 2 && CheckEnd(1, NumberOfColumns, FishArray, AllPengs, PengArray) == 0) {
@@ -174,8 +161,15 @@ int PlayGame(Pointer PointerX1, Pointer PointerY1, Pointer PointerDir1, Pointer 
                     if(MovePengNE(PengID, Spaces, NumberOfRows, NumberOfColumns, FishArray, AllPengs, PengArray)) {
                         printf("\nYou moved to NE");
                         moved = 1;
-                    } else
+                    } else {
                         printf("\nIllegal move!");
+                        if(failsafe == 10) {
+                            i++;
+                            failsafe = 0;
+                            endsafe++;
+                        }
+                        failsafe++;
+                    }
                     break;
                 }
                 case 2: {
@@ -183,8 +177,15 @@ int PlayGame(Pointer PointerX1, Pointer PointerY1, Pointer PointerDir1, Pointer 
                     if(MovePengE(PengID, Spaces, NumberOfRows, NumberOfColumns, FishArray, AllPengs, PengArray)) {
                         printf("\nYou moved to E");
                         moved = 1;
-                    } else
+                    } else {
                         printf("\nIllegal move!");
+                        if(failsafe == 10) {
+                            i++;
+                            failsafe = 0;
+                            endsafe++;
+                        }
+                        failsafe++;
+                    }
                     break;
                 }
                 case 3: {
@@ -192,8 +193,15 @@ int PlayGame(Pointer PointerX1, Pointer PointerY1, Pointer PointerDir1, Pointer 
                     if(MovePengSE(PengID, Spaces, NumberOfRows, NumberOfColumns, FishArray, AllPengs, PengArray)) {
                         printf("\nYou moved to SE");
                         moved = 1;
-                    } else
+                    } else {
                         printf("\nIllegal move!");
+                        if(failsafe == 10) {
+                            i++;
+                            failsafe = 0;
+                            endsafe++;
+                        }
+                        failsafe++;
+                    }
                     break;
                 }
                 case 4: {
@@ -201,8 +209,15 @@ int PlayGame(Pointer PointerX1, Pointer PointerY1, Pointer PointerDir1, Pointer 
                     if(MovePengSW(PengID, Spaces, NumberOfRows, NumberOfColumns, FishArray, AllPengs, PengArray)) {
                         printf("\nYou moved to SW");
                         moved = 1;
-                    } else
+                    } else {
                         printf("\nIllegal move!");
+                        if(failsafe == 10) {
+                            i++;
+                            failsafe = 0;
+                            endsafe++;
+                        }
+                        failsafe++;
+                    }
                     break;
                 }
                 case 5: {
@@ -210,8 +225,15 @@ int PlayGame(Pointer PointerX1, Pointer PointerY1, Pointer PointerDir1, Pointer 
                     if(MovePengW(PengID, Spaces, NumberOfRows, NumberOfColumns, FishArray, AllPengs, PengArray)) {
                         printf("\nYou moved to W");
                         moved = 1;
-                    } else
+                    } else {
                         printf("\nIllegal move!");
+                        if(failsafe == 10) {
+                            i++;
+                            failsafe = 0;
+                            endsafe++;
+                        }
+                        failsafe++;
+                    }
                     break;
                 }
                 case 6: {
@@ -219,8 +241,15 @@ int PlayGame(Pointer PointerX1, Pointer PointerY1, Pointer PointerDir1, Pointer 
                     if(MovePengNW(PengID, Spaces, NumberOfRows, NumberOfColumns, FishArray, AllPengs, PengArray)) {
                         printf("\nYou moved to NW");
                         moved = 1;
-                    } else
+                    } else {
                         printf("\nIllegal move!");
+                        if(failsafe == 10) {
+                            i++;
+                            failsafe = 0;
+                            endsafe++;
+                        }
+                        failsafe++;
+                    }
                     break;
                 }
                 default: {
@@ -232,10 +261,11 @@ int PlayGame(Pointer PointerX1, Pointer PointerY1, Pointer PointerDir1, Pointer 
             moved = 0;
             printf("\nYou chose wrong penguin! Try again!");
         }
-        Sleep(1000);
         DrawBoard(NumberOfRows, NumberOfColumns, FishArray, AllPengs, PengArray);
 
         if(moved == 1) {
+            endsafe = 0;
+            failsafe = 0;
             idRow = WhichPenguin(PengID, AllPengs, PengArray);
             if(i % 2) {
                 score1 = Score(score1, PengArray[idRow][1], PengArray[idRow][2], NumberOfColumns, FishArray);
@@ -243,12 +273,13 @@ int PlayGame(Pointer PointerX1, Pointer PointerY1, Pointer PointerDir1, Pointer 
                 score2 = Score(score2, PengArray[idRow][1], PengArray[idRow][2], NumberOfColumns, FishArray);
             }
             i++;
-            SaveBoard(filename, i, NumberOfRows, NumberOfColumns, FishArray, AllPengs, PengArray, score1, score2);
+            SaveBoard("game.map", i, NumberOfRows, NumberOfColumns, FishArray, AllPengs, PengArray, score1, score2);
         }
+        if(endsafe == 10)
+            break; //Jump to game end if no one has moved for 10 turns
 
         PrintCoords(score1, score2, AllPengs, PengArray);
         printf("Turn %d\n", i);
-        printf("Press any key to go to next turn\n");
         Sleep(100);
     }
 
@@ -259,6 +290,8 @@ int PlayGame(Pointer PointerX1, Pointer PointerY1, Pointer PointerDir1, Pointer 
     else
         printf("Player2 won! with %i points!", score2);
     printf("\nGame OVER!");
-    exit(0);
+    getch();
+    system ( "cls" );
+
 }
 

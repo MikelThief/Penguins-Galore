@@ -23,7 +23,7 @@
 
 1447336650 c:\users\micha許dropbox\private\dokumenty dropbox\studia\penguin_galore\generateboard.c
 
-1451993040 source:d:\dropbox\private\dokumenty dropbox\studia\informatyka\github\penguins_galore\drawboard.c
+1453277302 source:d:\dropbox\private\dokumenty dropbox\studia\informatyka\github\penguins_galore\drawboard.c
 	"main.h"
 
 1447336650 source:d:\dropbox\private\dokumenty dropbox\studia\informatyka\github\penguins_galore\generateboard.c
@@ -39,13 +39,13 @@
 
 1447336650 d:\dropbox\private\dokumenty dropbox\studia\informatyka\github\penguins_galore\mapgenerator.c
 
-1451993040 source:d:\dropbox\private\dokumenty dropbox\studia\informatyka\github\penguins_galore\mapgenerator.c
+1453277302 source:d:\dropbox\private\dokumenty dropbox\studia\informatyka\github\penguins_galore\mapgenerator.c
 	"main.h"
 
-1452012192 source:c:\users\teemu\documents\github\penguins_galore\drawboard.c
+1453145790 source:c:\users\teemu\documents\github\penguins_galore\drawboard.c
 	"main.h"
 
-1452018315 c:\users\teemu\documents\github\penguins_galore\main.h
+1453309355 c:\users\teemu\documents\github\penguins_galore\main.h
 	<time.h>
 	<stdio.h>
 	<stdlib.h>
@@ -63,10 +63,10 @@
 1448293322 source:c:\users\teemu\documents\github\penguins_galore\pengpos.c
 	"main.h"
 
-1452011403 source:c:\users\teemu\documents\github\penguins_galore\movepeng.c
+1452025070 source:c:\users\teemu\documents\github\penguins_galore\movepeng.c
 	"main.h"
 
-1452012192 source:c:\users\teemu\documents\github\penguins_galore\checkpeng.c
+1453151045 source:c:\users\teemu\documents\github\penguins_galore\checkpeng.c
 	"main.h"
 
 1449904582 source:c:\users\micha許dropbox\private\dokumenty dropbox\studia\informatyka\github\penguins_galore\mapgenerator.c
@@ -101,7 +101,7 @@
 1451897768 source:c:\users\teemu\documents\github\penguins_galore\mapcleaner.c
 	"main.h"
 
-1451897768 source:c:\users\teemu\documents\github\penguins_galore\pospeng.c
+1452025111 source:c:\users\teemu\documents\github\penguins_galore\pospeng.c
 	"main.h"
 
 1449690213 source:c:\users\micha許dropbox\private\dokumenty dropbox\studia\informatyka\github\penguins_galore\algorithms\manualoverdrive.c
@@ -110,10 +110,10 @@
 1449904582 source:d:\dropbox\private\dokumenty dropbox\studia\informatyka\github\penguins_galore\algorithms\manualoverdrive.c
 	<windows.h>
 
-1451993040 source:d:\dropbox\private\dokumenty dropbox\studia\informatyka\github\penguins_galore\checkpeng.c
+1453277302 source:d:\dropbox\private\dokumenty dropbox\studia\informatyka\github\penguins_galore\checkpeng.c
 	"main.h"
 
-1451993040 d:\dropbox\private\dokumenty dropbox\studia\informatyka\github\penguins_galore\main.h
+1453325362 d:\dropbox\private\dokumenty dropbox\studia\informatyka\github\penguins_galore\main.h
 	<time.h>
 	<stdio.h>
 	<stdlib.h>
@@ -122,10 +122,10 @@
 	<unistd.h>
 	<windows.h>
 
-1451993040 source:d:\dropbox\private\dokumenty dropbox\studia\informatyka\github\penguins_galore\movepeng.c
+1453277302 source:d:\dropbox\private\dokumenty dropbox\studia\informatyka\github\penguins_galore\movepeng.c
 	"main.h"
 
-1451993040 source:d:\dropbox\private\dokumenty dropbox\studia\informatyka\github\penguins_galore\pospeng.c
+1453277302 source:d:\dropbox\private\dokumenty dropbox\studia\informatyka\github\penguins_galore\pospeng.c
 	"main.h"
 
 1451993040 source:d:\dropbox\private\dokumenty dropbox\studia\informatyka\github\penguins_galore\mapcleaner.c
@@ -134,7 +134,7 @@
 1449693332 source:c:\users\teemu\documents\github\penguins_galore\algorithms\manualoverdrive.c
 	<windows.h>
 
-1451993040 source:d:\dropbox\private\dokumenty dropbox\studia\informatyka\github\penguins_galore\algorithms\manualoverride.c
+1453277302 source:d:\dropbox\private\dokumenty dropbox\studia\informatyka\github\penguins_galore\algorithms\manualoverride.c
 	<windows.h>
 	<string.h>
 	<stdio.h>
@@ -146,19 +146,19 @@
 1450129690 source:c:\users\micha許dropbox\private\dokumenty dropbox\studia\informatyka\github\penguins_galore\score.c
 	"main.h"
 
-1451993040 source:d:\dropbox\private\dokumenty dropbox\studia\informatyka\github\penguins_galore\score.c
+1453277302 source:d:\dropbox\private\dokumenty dropbox\studia\informatyka\github\penguins_galore\score.c
 	"main.h"
 
-1451993040 source:d:\dropbox\private\dokumenty dropbox\studia\informatyka\github\penguins_galore\asciiprinting.c
+1453277302 source:d:\dropbox\private\dokumenty dropbox\studia\informatyka\github\penguins_galore\asciiprinting.c
 	"main.h"
 
-1451993040 source:d:\dropbox\private\dokumenty dropbox\studia\informatyka\github\penguins_galore\menu.c
+1453334369 source:d:\dropbox\private\dokumenty dropbox\studia\informatyka\github\penguins_galore\menu.c
 	"main.h"
 
-1452295740 source:d:\dropbox\private\dokumenty dropbox\studia\informatyka\github\penguins_galore\playgame.c
+1453333737 source:d:\dropbox\private\dokumenty dropbox\studia\informatyka\github\penguins_galore\playgame.c
 	"main.h"
 
-1451993040 source:d:\dropbox\private\dokumenty dropbox\studia\informatyka\github\penguins_galore\introoutro.c
+1453277302 source:d:\dropbox\private\dokumenty dropbox\studia\informatyka\github\penguins_galore\introoutro.c
 	"main.h"
 
 1450129991 source:c:\users\micha許dropbox\private\dokumenty dropbox\studia\informatyka\github\penguins_galore\asciiprinting.c
@@ -230,38 +230,140 @@
 1451897768 source:c:\users\teemu\documents\github\penguins_galore\introoutro.c
 	"main.h"
 
-1452018688 source:c:\users\teemu\documents\github\penguins_galore\menu.c
+1453234582 source:c:\users\teemu\documents\github\penguins_galore\menu.c
 	"main.h"
 
-1452017805 source:c:\users\teemu\documents\github\penguins_galore\playgame.c
+1453152193 source:c:\users\teemu\documents\github\penguins_galore\playgame.c
 	"main.h"
 
 1452012192 source:c:\users\teemu\documents\github\penguins_galore\score.c
 	"main.h"
 
-1452016925 source:c:\users\teemu\documents\github\penguins_galore\saveload.c
+1453038726 source:c:\users\teemu\documents\github\penguins_galore\saveload.c
 	"main.h"
 
 1452018931 source:c:\users\teemu\documents\github\penguins_galore\algorithms\dummy.c
 	"user.h"
 	<stdio.h>
 
-1452012191 c:\users\teemu\documents\github\penguins_galore\algorithms\user.h
+1453038726 c:\users\teemu\documents\github\penguins_galore\algorithms\user.h
 
-1451993040 source:d:\dropbox\private\dokumenty dropbox\studia\informatyka\github\penguins_galore\algorithms\dummy.c
+1453277302 source:d:\dropbox\private\dokumenty dropbox\studia\informatyka\github\penguins_galore\algorithms\dummy.c
 	"user.h"
 	<stdio.h>
 
-1451993040 d:\dropbox\private\dokumenty dropbox\studia\informatyka\github\penguins_galore\algorithms\user.h
+1453277302 d:\dropbox\private\dokumenty dropbox\studia\informatyka\github\penguins_galore\algorithms\user.h
 
-1451993040 source:d:\dropbox\private\dokumenty dropbox\studia\informatyka\github\penguins_galore\saveload.c
+1453277302 source:d:\dropbox\private\dokumenty dropbox\studia\informatyka\github\penguins_galore\saveload.c
 	"main.h"
 
-1452023790 source:c:\users\teemu\documents\github\penguins_galore\algorithms\center.c
+1453038726 source:c:\users\teemu\documents\github\penguins_galore\algorithms\center.c
 	"user.h"
 	<stdio.h>
 
-1451993040 source:d:\dropbox\private\dokumenty dropbox\studia\informatyka\github\penguins_galore\algorithms\center.c
+1453277302 source:d:\dropbox\private\dokumenty dropbox\studia\informatyka\github\penguins_galore\algorithms\center.c
 	"user.h"
 	<stdio.h>
+
+1452965496 source:c:\users\moje konto\documents\github\penguins_galore\algorithms\center.c
+	"user.h"
+	<stdio.h>
+
+1452965496 c:\users\moje konto\documents\github\penguins_galore\algorithms\user.h
+
+1452965496 source:c:\users\moje konto\documents\github\penguins_galore\algorithms\dummy.c
+	"user.h"
+	<stdio.h>
+
+1452965496 source:c:\users\moje konto\documents\github\penguins_galore\algorithms\manualoverride.c
+	<windows.h>
+	<string.h>
+	<stdio.h>
+
+1452965496 source:c:\users\moje konto\documents\github\penguins_galore\asciiprinting.c
+	"main.h"
+
+1452966163 c:\users\moje konto\documents\github\penguins_galore\main.h
+	<time.h>
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<conio.h>
+	<unistd.h>
+	<windows.h>
+
+1452965496 source:c:\users\moje konto\documents\github\penguins_galore\checkpeng.c
+	"main.h"
+
+1452965496 source:c:\users\moje konto\documents\github\penguins_galore\drawboard.c
+	"main.h"
+
+1452965496 source:c:\users\moje konto\documents\github\penguins_galore\introoutro.c
+	"main.h"
+
+1452965496 source:c:\users\moje konto\documents\github\penguins_galore\mapgenerator.c
+	"main.h"
+
+1452966347 source:c:\users\moje konto\documents\github\penguins_galore\menu.c
+	"main.h"
+
+1452965496 source:c:\users\moje konto\documents\github\penguins_galore\movepeng.c
+	"main.h"
+
+1452965496 source:c:\users\moje konto\documents\github\penguins_galore\playgame.c
+	"main.h"
+
+1452965496 source:c:\users\moje konto\documents\github\penguins_galore\pospeng.c
+	"main.h"
+
+1452965496 source:c:\users\moje konto\documents\github\penguins_galore\saveload.c
+	"main.h"
+
+1452965496 source:c:\users\moje konto\documents\github\penguins_galore\score.c
+	"main.h"
+
+1452965496 source:c:\users\moje konto\documents\github\penguins_galore\cleaner.c
+	"main.h"
+
+1452979725 source:c:\users\moje konto\documents\github\penguins_galore\algorithms\juliantian.c
+	"user.h"
+	<stdio.h>
+	<math.h>
+	<time.h>
+
+1453038747 source:c:\users\teemu\documents\github\penguins_galore\cleaner.c
+	"main.h"
+
+1453144207 source:c:\users\teemu\documents\github\penguins_galore\algorithms\juliantian.c
+	"user.h"
+	<stdio.h>
+	<math.h>
+	<time.h>
+
+1453145172 source:c:\users\teemu\documents\github\penguins_galore\algorithms\bator.c
+	"user.h"
+
+1453309152 source:c:\users\teemu\documents\github\penguins_galore\algorithms\teemuvirkkala.c
+	"user.h"
+	<stdio.h>
+
+1453277302 source:d:\dropbox\private\dokumenty dropbox\studia\informatyka\github\penguins_galore\algorithms\teemuvirkkala.c
+	"user.h"
+	<stdio.h>
+
+1453277302 source:d:\dropbox\private\dokumenty dropbox\studia\informatyka\github\penguins_galore\cleaner.c
+	"main.h"
+
+1453319026 source:d:\dropbox\private\dokumenty dropbox\studia\informatyka\github\penguins_galore\algorithms\juliantian.c
+	"user.h"
+	<stdio.h>
+	<math.h>
+	<time.h>
+	<stdlib.h>
+
+1453334113 source:d:\dropbox\private\dokumenty dropbox\studia\informatyka\github\penguins_galore\algorithms\photon.c
+	<math.h>
+	<stdio.h>
+	<stdlib.h>
+	"user.h"
 

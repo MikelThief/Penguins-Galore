@@ -145,5 +145,3 @@ int WhichPenguin(int ID, int AllPengs, int PengArray[AllPengs][3]) {
     }
     return -1;
 }
-
-
