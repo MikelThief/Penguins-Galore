@@ -51,6 +51,54 @@ int PhotonSpaces(int Spaces, int PengID, const int Turn, const int NumberOfRows,
 int PhotonDir(int Spaces, int PengID, const int Turn, const int NumberOfRows, const int NumberOfColumns, const int FishArray[NumberOfRows][NumberOfColumns], const int AllPengs, int PengArray[AllPengs][3]);
 int PhotonPengID(int Spaces, int PengID, const int Turn, const int NumberOfRows, const int NumberOfColumns, const int FishArray[NumberOfRows][NumberOfColumns], const int AllPengs, int PengArray[AllPengs][3]);
 
+//Katja's Simple Random
+int KatjaRandomDir(int s, int PID, int a, int NumOfRows, int NumOfCols, int FishArray[NumOfRows][NumOfCols], int AllPengs, int PengArray[AllPengs][3]);
+int KatjaRandomCrdX(int s, int PID, int a, int NumOfRows, int NumOfCols, int FishArray[NumOfRows][NumOfCols], int AllPengs, int PengArray[AllPengs][3]);
+int KatjaRandomCrdY(int s, int PID, int a, int NumOfRows, int NumOfCols, int FishArray[NumOfRows][NumOfCols], int AllPengs, int PengArray[AllPengs][3]);
+int KatjaRandomSpaces(int s, int PID, int a, int NumOfRows, int NumOfCols, int FishArray[NumOfRows][NumOfCols], int AllPengs, int PengArray[AllPengs][3]);
+int KatjaRandomPengID(int s, int PID, int a, int NumOfRows, int NumOfCols, int FishArray[NumOfRows][NumOfCols], int AllPengs, int PengArray[AllPengs][3]);
+
+// Fatoumata Bocar
+int FBCrdX(int s, int PID, int a, int NumOfRows, int NumOfCols, int FishArray[NumOfRows][NumOfCols], int AllPengs, int PengArray[AllPengs][3]);
+int FBCrdX(int s, int PID, int a, int NumOfRows, int NumOfCols, int FishArray[NumOfRows][NumOfCols], int AllPengs, int PengArray[AllPengs][3]);
+int FBCrdY(int s, int PID, int a, int NumOfRows, int NumOfCols, int FishArray[NumOfRows][NumOfCols], int AllPengs, int PengArray[AllPengs][3]);
+int FBSpaces(int s, int PID, int a, int NumOfRows, int NumOfCols, int FishArray[NumOfRows][NumOfCols], int AllPengs, int PengArray[AllPengs][3]);
+int FBDir(int s, int PID, int a, int NumOfRows, int NumOfCols, int FishArray[NumOfRows][NumOfCols], int AllPengs, int PengArray[AllPengs][3]);
+int FBPengID(int s, int PID, int a, int NumOfRows, int NumOfCols, int FishArray[NumOfRows][NumOfCols], int AllPengs, int PengArray[AllPengs][3]);
+
+//Michal Adamiec
+int AdamiecCrdX(int s, int PID, int a, int NumOfRows, int NumOfCols, int FishArray[NumOfRows][NumOfCols], int AllPengs, int PengArray[AllPengs][3]);
+int AdamiecCrdY(int s, int PID, int a, int NumOfRows, int NumOfCols, int FishArray[NumOfRows][NumOfCols], int AllPengs, int PengArray[AllPengs][3]);
+int AdamiecSpaces(int s, int PID, int a, int NumOfRows, int NumOfCols, int FishArray[NumOfRows][NumOfCols], int AllPengs, int PengArray[AllPengs][3]);
+int AdamiecDir(int s, int PID, int a, int NumOfRows, int NumOfCols, int FishArray[NumOfRows][NumOfCols], int AllPengs, int PengArray[AllPengs][3]);
+int AdamiecPengID(int s, int PID, int a, int NumOfRows, int NumOfCols, int FishArray[NumOfRows][NumOfCols], int AllPengs, int PengArray[AllPengs][3]);
+
+//Mateusz Roszkowski
+int RandomX(int s, int PID, int a, int NumOfRows, int NumOfCols, int FishArray[NumOfRows][NumOfCols], int AllPengs, int PengArray[AllPengs][3]);
+int RandomY(int s, int PID, int a, int NumOfRows, int NumOfCols, int FishArray[NumOfRows][NumOfCols], int AllPengs, int PengArray[AllPengs][3]);
+int RandomSpaces(int s, int PID, int a, int NumOfRows, int NumOfCols, int FishArray[NumOfRows][NumOfCols], int AllPengs, int PengArray[AllPengs][3]);
+int RandomDir(int s, int PID, int a, int NumOfRows, int NumOfCols, int FishArray[NumOfRows][NumOfCols], int AllPengs, int PengArray[AllPengs][3]);
+int RandomPengID(int s, int PID, int a, int NumOfRows, int NumOfCols, int FishArray[NumOfRows][NumOfCols], int AllPengs, int PengArray[AllPengs][3]);
+
+//Boiev
+/*
+int MikebotXcord(int a, int PID, int b, int NumOfCols, int NumOfCols,int FishArray[NumOfRows][NumOfCols],int Allpengs, int PengArray[AllPengs][3]);
+int MikebotYcord(int a, int PID, int b, int NumOfCols, int NumOfCols,int FishArray[NumOfRows][NumOfCols],int Allpengs, int PengArray[AllPengs][3]);
+int MikeRandDirrection(int a, int PID, int b, int NumOfRows, int NumOfCols, int Fisharray[NumofRows][NumOfCols],int AllPengs,int Pengarray[AllPengs][3]);
+int MikeRandpeng(int a, int PID,int b, int NumOfRows, int NumOfCols, int FishArray[NumOfRows][NumOfCols], int AllPengs,int PengArray[Allpengs][3]);
+int NumberofSpaces(int a, int PID,int b, int NumOfRows, int NumOfCols, int FishArray[NumOfRows][NumOfCols], int AllPengs,int PengArray[Allpengs][3]);
+*/
+
+
+
+
+
+
+
+
+
+
+
 
 
 

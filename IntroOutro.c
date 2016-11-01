@@ -1,7 +1,7 @@
 #include "main.h"
 
 void Intro(){
-    //PlaySound("resources/penguins.wav", NULL, SND_ASYNC); // Plays sound file; need to add winmm in Settings -> Compiler ->                                      //                                              ->Linker Settings
+    PlaySound("resources/penguins.wav", NULL, SND_ASYNC); // Plays sound file; need to add winmm in Settings -> Compiler ->                                      //                                              ->Linker Settings
     char *filename = "resources/penguinsgalore.txt";
     FILE *fptr = NULL;
     if((fptr = fopen(filename,"r")) == NULL)

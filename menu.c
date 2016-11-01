@@ -11,7 +11,6 @@ int main() {
         printf("\n1. Start the game ");
         printf("\n2. Show instructions ");
         printf("\n3. Exit game \n");
-
         scanf("%d", &menu);
         //choosing Player1 algorithm
         switch(menu) {
@@ -28,6 +27,11 @@ int main() {
                     printf("4. Julian Tian's algorithm\n");
                     printf("5. Photon - Michal Bator\n");
                     printf("6. Teemu\n");
+                    printf("7. Katja's random\n");
+                    printf("8. Mateusz Roszkowski\n");
+                    printf("9. Michal Adamiec\n");
+                    printf("10. Fatoumata Bocar\n");
+                    printf("11. Michael Boiev\n");
 
                     scanf("%i", &p);
                     switch(p) {
@@ -92,6 +96,56 @@ int main() {
                             i = 1;
                             break;
                         }
+                        case 7: {
+                            printf("Katja's Random");
+                            PointerX1 = &KatjaRandomCrdX;
+                            PointerY1 = &KatjaRandomCrdY;
+                            PointerDir1 = &KatjaRandomSpaces;
+                            PointerSpaces1 = &KatjaRandomDir;
+                            PointerPengID1 = &KatjaRandomPengID;
+                            i = 1;
+                            break;
+                        }
+                        case 8: {
+                            printf("Mateusz Roszkowski's Rozek");
+                            PointerX1 = &RandomX;
+                            PointerY1 = &RandomY;
+                            PointerDir1 = &RandomDir;
+                            PointerSpaces1 = &RandomSpaces;
+                            PointerPengID1 = &RandomPengID;
+                            i = 1;
+                            break;
+                        }
+                        case 9: {
+                            printf("Michal Adamiec");
+                            PointerX1 = &AdamiecCrdX;
+                            PointerY1 = &AdamiecCrdY;
+                            PointerDir1 = &AdamiecDir;
+                            PointerSpaces1 = &AdamiecSpaces;
+                            PointerPengID1 = &AdamiecPengID;
+                            i = 1;
+                            break;
+                        }
+                        case 10: {
+                            printf("Fatoumata Bocar");
+                            PointerX1 = &FBCrdX;
+                            PointerY1 = &FBCrdY;
+                            PointerDir1 = &FBDir;
+                            PointerSpaces1 = &FBSpaces;
+                            PointerPengID1 = &FBPengID;
+                            i = 1;
+                            break;
+                        }
+                        /*case 11: {
+                            printf("Michael Boiev");
+                            PointerX1 = &MikebotXcord;
+                            PointerY1 = &MikebotYcord;
+                            PointerDir1 = &MikeRandDirrection;
+                            PointerSpaces1 = &NumberofSpaces;
+                            PointerPengID1 = &MikeRandpeng;
+                            i = 1;
+                            break;
+                        }*/
                         default: {
                             printf("Set a proper parameter!\n");
                             break;
@@ -104,13 +158,18 @@ int main() {
                 while(i == 0) {
                     Sleep(700);
                     system ( "cls" );
-                    printf("Choose Player2's algorithm:\n");
+                    printf("Choose Player1's algorithm:\n");
                     printf("1. Manual Override\n");
                     printf("2. Dummy\n");
                     printf("3. Center\n");
                     printf("4. Julian Tian's algorithm\n");
                     printf("5. Photon - Michal Bator\n");
                     printf("6. Teemu\n");
+                    printf("8. Mateusz Roszkowski\n");
+                    printf("7. Katja's random\n");
+                    printf("9. Michal Adamiec\n");
+                    printf("10. Fatoumata Bocar\n");
+                    printf("11. Michael Boiev\n");
 
                     scanf("%i", &p);
                     switch(p) {
@@ -174,6 +233,56 @@ int main() {
                             i = 1;
                             break;
                         }
+                        case 7: {
+                            printf("Katja's Random");
+                            PointerX2 = &KatjaRandomCrdX;
+                            PointerY2 = &KatjaRandomCrdY;
+                            PointerDir2 = &KatjaRandomSpaces;
+                            PointerSpaces2 = &KatjaRandomDir;
+                            PointerPengID2 = &KatjaRandomPengID;
+                            i = 1;
+                            break;
+                        }
+                        case 8: {
+                            printf("Mateusz Roszkowski's Rozek");
+                            PointerX2 = &RandomX;
+                            PointerY2 = &RandomY;
+                            PointerDir2 = &RandomDir;
+                            PointerSpaces2 = &RandomSpaces;
+                            PointerPengID2 = &RandomPengID;
+                            i = 1;
+                            break;
+                        }
+                        case 9: {
+                            printf("Michal Adamiec");
+                            PointerX2 = &AdamiecCrdX;
+                            PointerY2 = &AdamiecCrdY;
+                            PointerDir2 = &AdamiecDir;
+                            PointerSpaces2 = &AdamiecSpaces;
+                            PointerPengID2 = &AdamiecPengID;
+                            i = 1;
+                            break;
+                        }
+                        case 10: {
+                            printf("Fatoumata Bocar");
+                            PointerX2 = &FBCrdX;
+                            PointerY2 = &FBCrdY;
+                            PointerDir2 = &FBDir;
+                            PointerSpaces2 = &FBSpaces;
+                            PointerPengID2 = &FBPengID;
+                            i = 1;
+                            break;
+                        }
+                        /*case 11: {
+                            printf("Michael Boiev");
+                            PointerX2 = &MikebotXcord;
+                            PointerY2 = &MikebotYcord;
+                            PointerDir2 = &MikeRandDirrection;
+                            PointerSpaces2 = &NumberofSpaces;
+                            PointerPengID2 = &MikeRandpeng;
+                            i = 1;
+                            break;
+                        }*/
                         default: {
                             printf("Set a proper parameter!\n");
                             break;
@@ -200,6 +309,8 @@ printf("Game end when last penguin has no possibility to move:");
 printf("\n\t He stands at the last ice floats.");
 printf("\n\t Between him and other possible ice floats there is always 1-float gap.");
 printf("\nThe winner is the player with biggest number of fish.");
+getch();
+
             }
             case 3: {
                 printf("\nGoodbye!");
